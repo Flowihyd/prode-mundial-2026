@@ -514,6 +514,7 @@ async function loadState(){
               .select('*')
               .in('participant_id', playerIds)
               .order('match_id', { ascending: true })
+.order('participant_id', { ascending: true })
           )
         : Promise.resolve({data:[], error:null}),
       fetchAllPages(() =>
